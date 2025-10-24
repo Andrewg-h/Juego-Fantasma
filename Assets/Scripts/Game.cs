@@ -64,10 +64,12 @@ public class GameManager : MonoBehaviour
         settingsPanel.SetActive(false);
     }
 
+
+
     // ---- MENÚ PRINCIPAL ----
     public void ReturnToMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Menu"); // Cambia "Menu" por el nombre exacto de tu escena de menú
+        SceneManager.LoadScene("Menuu"); // Cambia "Menu" por el nombre exacto de tu escena de menú
     }
 }

@@ -9,7 +9,7 @@ public class MenuManager : MonoBehaviour
     // Inicia el juego
     public void PlayGame()
     {
-        SceneManager.LoadScene("SampleScene"); // 👈 Cambia por el nombre real de tu escena de juego
+        SceneManager.LoadScene("SampleScene"); 
     }
 
     // Créditos
