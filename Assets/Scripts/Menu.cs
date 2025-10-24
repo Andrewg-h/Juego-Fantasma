@@ -3,46 +3,41 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    public GameObject panelCredits;
-    public GameObject panelSettings;
+    public GameObject creditPanel;
+    public GameObject settingsPanel;
 
-    void Start()
-    {
-        if (panelCredits != null) panelCredits.SetActive(false);
-        if (panelSettings != null) panelSettings.SetActive(false);
-    }
-
+    // Inicia el juego
     public void PlayGame()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("SampleScene"); // 👈 Cambia por el nombre real de tu escena de juego
     }
 
+    // Créditos
     public void OpenCredits()
     {
-        panelCredits.SetActive(true);
+        creditPanel.SetActive(true);
     }
 
     public void CloseCredits()
     {
-        panelCredits.SetActive(false);
+        creditPanel.SetActive(false);
     }
 
+    // Configuración
     public void OpenSettings()
     {
-        panelSettings.SetActive(true);
+        settingsPanel.SetActive(true);
     }
 
     public void CloseSettings()
     {
-        panelSettings.SetActive(false);
+        settingsPanel.SetActive(false);
     }
 
-    public void Quit()
+    // Salir del juego
+    public void QuitGame()
     {
-        #if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-        #else
+        Debug.Log("Saliendo del juego...");
         Application.Quit();
-        #endif
     }
 }
